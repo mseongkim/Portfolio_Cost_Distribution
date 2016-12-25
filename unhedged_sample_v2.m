@@ -56,7 +56,7 @@ Today = datetime('today');
 Forward_price_orig = Forward_price';
 volume_orig = volume';
 zos = size(Forward_price_orig,1); % number of products
-mos = size(Forward_price_orig,2); % number of month
+mos = size(Forward_price_orig,2); % number of months
 
 corr_chol = chol(corr_matrix);
 positivedefinite = all(eig(corr_matrix) > 0); % Check the PSD of corr_matrix
@@ -229,7 +229,6 @@ xfcost_un = mincost_un:(maxcost_un-mincost_un)/(numpts-1):maxcost_un;
 [yfprob_un, xfcost_un] = ksdensity(unhedged_strategy,xfcost_un);
 lognparms_un = lognfit(unhedged_strategy);
 yfprob_un = lognpdf(xfcost_un,lognparms_un(1),lognparms_un(2));
-
 yfprob_un = yfprob_un ./ (sum(yfprob_un)*(maxcost_un-mincost_un)/(numpts-1));
 pdfdist_un = [pdfdist_un xfcost_un' yfprob_un'*10^6];
 hold on;
