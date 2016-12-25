@@ -6,12 +6,12 @@
 close all; clear all;
 tic
 
-%%User input
+%%User input   
 Start_month = 1;
 Start_year = 2018;
 End_month = 12;
 End_year = 2018;
-n_obs = 10000; % Number of Monte Carlo simulation
+n_obs = 10000; % Number of Monte Carlo simulations
 
 volume = ...
 [70	100	80	30
