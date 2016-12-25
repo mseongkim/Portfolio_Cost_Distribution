@@ -6,7 +6,7 @@
 close all; clear all;
 tic
 
-%%User input
+%User input
 Start_month = 1;
 Start_year = 2018;
 End_month = 12;
