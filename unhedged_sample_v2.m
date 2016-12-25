@@ -6,7 +6,7 @@
 close all; clear all;
 tic
 
-%User input
+%User inputs
 Start_month = 1;
 Start_year = 2018;
 End_month = 12;
@@ -27,9 +27,9 @@ volume = ...
  80	180	120	90
  70	210	130	100];
 
-% User should also choose the products to draw data from SQL server accordingly. 
+%User should also choose the products to draw data from SQL server accordingly. 
 
-%%Database(SQL server) input
+%Database(SQL server) inputs
 sigma1 = [0.6 0.4 0.7 0.3]; % Estimated multi-factor parameter (1) from observed market data
 sigma2 = [0.2 0.15 0.3 0.15]; % Estimated multi-factor parameter(2)from observed market data
 kappa = [3 2.5 3.5 2.7]; % Estimated multi-factor parameter(3)from observed market data
@@ -50,7 +50,7 @@ Forward_price = ... % 1-year monthly market forward prices for four products
 
 corr_matrix = [1 0.6 0.4 0.8;0.6 1 0.2 0.7;0.4 0.2 1 0.1;0.8 0.7 0.1 1];
 
-%%%% End of inputs %%%%
+%End of inputs
 
 Today = datetime('today');
 Forward_price_orig = Forward_price';
