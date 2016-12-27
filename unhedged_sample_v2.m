@@ -136,7 +136,7 @@ for i = 1:len2
         m = m + 1;
 end
 
-%Calculate local varianes
+%Calculate local variances
 m=2;
 local_vol_1 = zeros(Time_day_ind(end),len2);
 local_vol_2 = zeros(Time_day_ind(end),len2);
