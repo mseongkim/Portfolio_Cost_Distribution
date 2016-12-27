@@ -1,7 +1,7 @@
 %unhedged_sample_v1
 %sample code for unhedged portfolio only
 %hedging instruments(e.g., trigger,stoploss,option) not included
-%assumed that market data and parameters are given from SQL server
+%assume that market data and parameters are given from SQL server
 
 close all; clear all;
 tic
