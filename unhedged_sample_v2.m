@@ -1,5 +1,5 @@
 %unhedged_sample_v1
-%sample code for unhedged portfolio only
+%sample code for an unhedged portfolio only
 %hedging instruments(e.g., trigger,stoploss,option) not included
 %assume that market data and parameters are given from SQL server
 
