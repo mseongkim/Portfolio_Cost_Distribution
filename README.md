@@ -1,2 +1,3 @@
 # Portfolio_Cost_Distribution
-Generate cost scenario analyses for hedged and unhedged portfolios
+Cost scenario analyses for hedged and unhedged portfolios 
+Multi-factor stochastic model / Local Variance / Monte Calro simulation
