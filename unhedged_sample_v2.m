@@ -205,7 +205,7 @@ end
 
 end
 
-if num_zone == 1
+if num_zone
    unhedged_strategy = unhedged_strategy_drft;
 else   
    unhedged_strategy = sum(unhedged_strategy_drft)/num_zone;
