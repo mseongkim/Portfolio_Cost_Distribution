@@ -252,7 +252,6 @@ title('Unhedged Portfolio Cost Distribution')
 xlabel('Cost')
 ylabel('Probability')
 
-toc
 
 end
 
