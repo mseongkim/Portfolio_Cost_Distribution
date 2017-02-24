@@ -145,7 +145,7 @@ for i = 1:len2
         m = m + 1;
 end
 
-%Calculate local varianes
+%Calculate local variances
 m=2;
 local_vol_1 = zeros(Time_day_ind(end),len2);
 local_vol_2 = zeros(Time_day_ind(end),len2);
@@ -168,11 +168,10 @@ Price = zeros(time_to_maturity_ind_adj1(end)+1,n_obs*size(Time_numeric_ind,2));
 Price(1,:) = Forward_price(1,:);
 for i = 1:n_obs
     
-    %Generate the correlated random number 1 and 2 using Cholesky
-    %decomposition
+    %Generate the correlated random number 1 and 2 using Cholesky decomposition
     %Random number 1 and 2 are independent each other    
-    Random_Sample_1_orig = (corr_chol'*normrnd(0,1,[4,size(local_vol_1,1)]))';
-    Random_Sample_2_orig = (corr_chol'*normrnd(0,1,[4,size(local_vol_1,1)]))';
+    Random_Sample_1_orig = (corr_chol'*normrnd(0,1,[zos,size(local_vol_1,1)]))';
+    Random_Sample_2_orig = (corr_chol'*normrnd(0,1,[zos,size(local_vol_1,1)]))';
     Random_Sample_1 = Random_Sample_1_orig(:,num_zone); 
     Random_Sample_2 = Random_Sample_2_orig(:,num_zone);
     
@@ -228,8 +227,8 @@ else
 end
 
 %unhedged portfolio 
-figure(1)
-h_1 = histogram(unhedged_strategy,numpts,'Normalization','pdf');
+%figure(1)
+%h_1 = histogram(unhedged_strategy,numpts,'Normalization','pdf');
 [cnt_un, xcost_un] = hist(unhedged_strategy,numpts);
 
 %normalize
@@ -246,11 +245,11 @@ yfprob_un = lognpdf(xfcost_un,lognparms_un(1),lognparms_un(2));
 
 yfprob_un = yfprob_un ./ (sum(yfprob_un)*(maxcost_un-mincost_un)/(numpts-1));
 curve_xy = [xfcost_un',yfprob_un'];
-hold on;
-plot(xfcost_un,yfprob_un,'r','LineWidth',1) 
-title('Unhedged Portfolio Cost Distribution')
-xlabel('Cost')
-ylabel('Probability')
+%hold on;
+%plot(xfcost_un,yfprob_un,'r','LineWidth',1) 
+%title('Unhedged Portfolio Cost Distribution')
+%xlabel('Cost')
+%ylabel('Probability')
 
 
 end
